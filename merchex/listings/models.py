@@ -1,4 +1,4 @@
 from django.db import models
 
-class Band(models.Models):
-    name = models.fields.charfield(max_length=100)
+class Band(models.Model):
+    name = models.fields.CharField(max_length=100)

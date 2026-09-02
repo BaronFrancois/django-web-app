@@ -1,0 +1,12 @@
+<html>
+    <head><title>Merchex</title></head>
+    <body>
+        <h1>Hello Django !</h1>
+    <p>
+        Mes groupes préférés sont :
+        {% for band in bands %}
+        {{ band.name }},
+        {% endfor %}
+</p>
+    </body>
+</html>

@@ -4,6 +4,13 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Band
 
 def hello(request):
-    return HttpResponse('<h1>Hello Django!</h1>')
+    bands = Band.objects.all()
+    items=''.join(
+        f"<li>{band.name}</li>"
+        for band in bands
+    )
+    return render(request,'listings/hello.html',
+        {'bands': bands})
